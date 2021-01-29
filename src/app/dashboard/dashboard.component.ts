@@ -15,6 +15,10 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.getHeroes();
   }
+  selectedHero: Hero;
+  onSelect(hero):void {
+    this.selectedHero = hero;
+  }
 
   getHeroes():void {
     this.heroService.getHeroes().
